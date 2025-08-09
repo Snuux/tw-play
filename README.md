@@ -1,6 +1,6 @@
 # tw-play
 
-A lightweight loader for Twine/Twee stories compiled in the browser via [Extwee](https://github.com/videlais/extwee) and [SugarCube](https://www.motoslave.net/sugarcube/).
+A lightweight loader for Twine/Twee stories compiled in the browser via [Extwee](https://github.com/videlais/extwee) and [SugarCube](https://www.motoslave.net/sugarcube/). Mainly for ChatGPT and other AI story generation stuff.
 
 This repository contains:
 
@@ -15,13 +15,11 @@ Include the loader script on your page. Write your story in a `<script type="tex
 ### Inline example
 
 ```html
-<!doctype html>
-<meta charset="utf-8" />
 <script type="text/twee" id="twee">
 :: StoryTitle
 My Game
 :: StoryData
-{"ifid":"DEMO-IFID","start":"start","format":"SugarCube","format-version":"2.37.3"}
+{"ifid":"145F3C37-A08E-4BAF-967A-60759074DB43","start":"start","format":"SugarCube","format-version":"2.37.3"}
 :: start
 Hello! [[Next->next]]
 :: next
@@ -33,13 +31,9 @@ Bye.
 ### External story example
 
 ```html
-<!doctype html>
-<meta charset="utf-8" />
 <div id="play"></div>
 <script
-  src="https://cdn.jsdelivr.net/gh/YOURUSER/tw-play@v0.1.0/dist/tw-play.min.js"
+  src="https://cdn.jsdelivr.net/gh/Snuux/tw-play@v1.0.0/dist/tw-play.min.js"
   data-src="story.twee"
   defer></script>
 ```
-
-Replace `YOURUSER` and version tag with your own GitHub username and release. See the `examples/` folder for working demos.
