@@ -27,7 +27,7 @@ Hello! [[Next->next]]
 :: next
 Bye.
 </script>
-<script src="https://cdn.jsdelivr.net/gh/YOURUSER/tw-play@v0.1.0/dist/tw-play.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/Snuux/tw-play@v1.0.0/dist/tw-play.min.js" defer></script>
 ```
 
 ### External story example
