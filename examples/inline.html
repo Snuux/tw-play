@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>tw-play inline demo</title>
+
+<!-- Inline Twee content. The loader will automatically compile this. -->
+<script type="text/twee" id="twee">
+:: StoryTitle
+Demo
+:: StoryData
+{"ifid":"DEMO-IFID","start":"start","format":"SugarCube","format-version":"2.37.3"}
+:: start
+Hello from inline demo! [[Next->next]]
+:: next
+It works!
+</script>
+
+<!-- Load the compiled loader. Adjust the path as needed if hosting from CDN -->
+<script src="../dist/tw-play.min.js" defer></script>

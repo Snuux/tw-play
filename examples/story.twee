@@ -1,0 +1,8 @@
+:: StoryTitle
+External Story
+:: StoryData
+{"ifid":"DEMO-IFID","start":"start","format":"SugarCube","format-version":"2.37.3"}
+:: start
+This story is loaded from an external .twee file. [[Next->next]]
+:: next
+You're seeing the compiled output.
