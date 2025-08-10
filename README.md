@@ -1,18 +1,23 @@
 # tw-play
 
-A lightweight loader for Twine/Twee stories compiled in the browser via [Extwee](https://github.com/videlais/extwee) and [SugarCube](https://www.motoslave.net/sugarcube/). Mainly for ChatGPT and other AI story generation stuff.
+A lightweight, zero-build loader for [Twine](https://twinery.org/) / Twee stories that compiles directly in the browser using [Extwee](https://github.com/videlais/extwee) and [SugarCube](https://www.motoslave.net/sugarcube/). Designed specifically for AI-assisted story creation in **ChatGPT** and other generative AI tools.
 
-This repository contains:
+With **tw-play**, you can write and instantly play interactive fiction without installing any compilation tools. Simply drop your Twee content into an HTML page, and the loader will fetch SugarCube, compile the story, and render it.
 
-* `src/tw-play.js` — source loader script. It automatically compiles Twee content on page load using Extwee and a Twine story format.
-* `dist/tw-play.min.js` — minified version suitable for CDN distribution.
-* `examples/` — sample HTML and Twee to demonstrate usage.
+## Features
+- **Instant play**: Write Twee and see it run immediately in your browser.
+- **AI workflow ready**: Perfect for generating stories in ChatGPT or similar LLMs and playing them instantly.
+- **No build step**: Everything happens client-side—no Tweego, no Twine app.
+- **Single file portability**: One HTML file + the loader script.
+- **CDN friendly**: Use via [jsDelivr](https://www.jsdelivr.com/) or self-host.
+
+## Repository Contents
+- `src/tw-play.js` — Readable source loader.
+- `dist/tw-play.min.js` — Minified loader for production/CDN.
+- `examples/` — Demo HTML and `.twee` examples for inline usage.
 
 ## Usage
-
-Include the loader script on your page. Write your story in a `<script type="text/twee">` block or store it in an external `.twee` file. By default the loader fetches SugarCube 2.37.3 and Extwee 2.3.2 from jsDelivr, then compiles your story and displays it in an iframe with `id="play"`.
-
-### Inline example
+Include the loader script and your story in a `<script type="text/twee">` block.
 
 ```html
 <script type="text/twee" id="twee">
@@ -25,15 +30,46 @@ Hello! [[Next->next]]
 :: next
 Bye.
 </script>
+<script src="https://cdn.jsdelivr.net/gh/YOURUSER/tw-play@v1.0.0/dist/tw-play.min.js" defer></script>
+```
+
+## Example Prompt for AI
+````
+You are to generate a complete playable interactive fiction story in **Twee** format, wrapped inside an HTML `<script type="text/twee" id="twee">` block, so it can be run directly in the browser with the **tw-play** loader. Don't change script src and StoryData of this story.
+
+**Story theme:** [Describe the theme you want, e.g., “a post-apocalyptic mystery” or “a comedic fantasy tavern scene”]
+
+Use this template as output:
+```html
+<script type="text/twee" id="twee">
+:: StoryTitle
+[TITLE HERE]
+:: StoryData
+{"ifid":"145F3C37-A08E-4BAF-967A-60759074DB43","start":"start","format":"SugarCube","format-version":"2.37.3"}
+:: start
+[OPENING PASSAGE CONTENT]
+</script>
 <script src="https://cdn.jsdelivr.net/gh/Snuux/tw-play@v1.0.0/dist/tw-play.min.js" defer></script>
 ```
+````
 
-### External story example
+## Ready-to-use GPT
+Here: https://chatgpt.com/g/g-6897dcc481c081918220635b51b4fd79-twine-inline
 
-```html
-<div id="play"></div>
-<script
-  src="https://cdn.jsdelivr.net/gh/Snuux/tw-play@v1.0.0/dist/tw-play.min.js"
-  data-src="story.twee"
-  defer></script>
-```
+## Please use canvas and canvas "run code" button!
+
+<p align="center">
+  <img src="https://github.com/Snuux/tw-play/blob/main/examples/use-canvas.jpg?raw=true">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Snuux/tw-play/blob/main/examples/twine-inline.jpg?raw=true">
+</p>
+
+## Why for ChatGPT or other AI?
+In AI chat tools, you can:
+1. Prompt the AI to generate Twee story code.
+2. Paste it into this template with `tw-play`.
+3. Open it in your browser and instantly play.
+
+This is perfect for **rapid prototyping**, **live storytelling**, and sharing interactive fiction ideas.
