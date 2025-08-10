@@ -1,6 +1,15 @@
 # tw-play
 
-A lightweight, zero-build loader for [Twine](https://twinery.org/) / Twee stories that compiles directly in the browser using [Extwee](https://github.com/videlais/extwee) and [SugarCube](https://www.motoslave.net/sugarcube/). Designed specifically for AI-assisted story creation in **ChatGPT** and other generative AI tools.
+A lightweight, zero-build loader for [Twine](https://twinery.org/) / Twee stories that compiles directly in the browser using [Extwee](https://github.com/videlais/extwee) and [SugarCube](https://www.motoslave.net/sugarcube/). 
+
+The idea:
+No Tweego, no Twine app, no build step. Just drop your Twee code into an HTML page, include the script, and it runs instantly.
+
+Perfect if you:
+- Want to quickly test story snippets without setting up a toolchain.
+- Like working in plain text editors.
+- Use ChatGPT or similar tools to generate story drafts (but works totally fine without AI).
+- Want a single-file, portable story you can share or host anywhere.
 
 With **tw-play**, you can write and instantly play interactive fiction without installing any compilation tools. Simply drop your Twee content into an HTML page, and the loader will fetch SugarCube, compile the story, and render it.
 
